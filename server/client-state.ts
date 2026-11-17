@@ -761,7 +761,10 @@ export const DEFAULT_DARK_MINIMAL_SETTINGS: ClientSettings = Object.freeze({
 	softCapTokens: 0,
 	softCapByModel: {},
 	autoCompactionInstructions: "",
-	quickPhrases: ["继续", "上传发布", "上传github", "处理pr", "处理issue", "还有更好的方式吗", "关闭回复issue"],
+	// 默认快捷短语是界面文案，跟随界面语言：这里保持为空，由浏览器端用 i18n key
+	// （QUICK_PHRASE_DEFAULT_KEYS）在当前语言下播种一次。此前这里写死中文，
+	// 导致英文界面下仍显示中文短语。
+	quickPhrases: [],
 	quickPhrasesEnabled: true,
 	minimalNewChat: false,
 	preserveDraftAcrossConversations: false,
